@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{%block titulo%}Editar | {%endblock%}
+
+{% block conteudo %}
+{% load static%}
+<link rel="stylesheet" href="{% static 'formularios.css' %}">
+<link rel="stylesheet" href="{% static 'dashboard.css' %}">
+
+<div class="form-group2">
+    <div style="padding:2rem;"></div>
+    <div class="squared-container">
+            <div class="question-container">
+                    <h2>Editando dados de {{contato.nome}} {{contato.sobrenome}}</h2>
+            </div>  
+            <div class="form-tb-container">  <!-- enctype multipart - pq vai ter diferentes tipos de arquivo fotos/texto etc -->
+                    
+                    <form action="" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %} 
+                            <table class="mytable">
+                                    {{form}}
+                                    <tr>
+                                            <td colspan="2">
+                                                    <button type="submit" class="my-button">Salvar</button>
+                                            </td>
+                                    </tr>
+                            </table>
+                    </form>
+
+            </div>
+    </div>
+</div>
+{% endblock %}

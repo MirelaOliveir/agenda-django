@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block titulo%}{%endblock%}Agenda</title>
+    <link rel="stylesheet" href=" {% static 'base.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    {%block 'link'%} {%endblock%}
+</head>
+<body>
+    <nav class="dark-bg header">
+        <div class="container">
+            <a href="/"><i class="fa fa-home"></i> Agenda</a>
+            <nav class="submenu">
+                {% if request.user.is_authenticated %}
+                    <div class="submenu-inside">
+                        <a href="{% url 'logout' %}">Logout</a>
+                        <span>|</span>
+                        <a href="{% url 'dashboard' %}">Novo Contato</a>
+                    </div>
+                {% else %}
+                <div class="submenu-inside">
+                    <a href="{% url 'login' %}">Login</a>
+                    <span>|</span>
+                    <a href="{% url 'register' %}">Criar conta</a>
+                </div>
+                {% endif %}
+            </nav>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        {% include 'parciais/_messages.html' %} 
+
+        {%block conteudo%}
+        {%endblock%}
+    
+    </div>
+
+    <footer class="dark-bg footing"> Feito com <span>♥</span> por Mirela</footer>
+</body>
+
+</html>

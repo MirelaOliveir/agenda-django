@@ -1,0 +1,105 @@
+/*
+ALTERAR: 343a40 -> Cor do topo
+ALTERAR: 0D435C -> Cor dos links e cabeçalhos
+*/
+
+#branding h1,
+#branding h1 a,
+#branding h1 a:link,
+#branding h1 a:visited {
+    color: #FFFFFF;
+}
+
+#header {
+    background: #343a40;
+    color: #FFFFFF;
+}
+
+#user-tools a:focus, #user-tools a:hover {
+    border-bottom-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+a:link, a:visited {
+    color: #0D435C;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: #0D435C;
+    color: #FFFFFF;
+}
+
+div.breadcrumbs {
+    background: #0D435C;
+    color: #FFFFFF;
+}
+
+.paginator a:link, .paginator a:visited {
+    background: #0D435C !important;
+    color: #FFFFFF;
+}
+
+.paginator a:hover {
+    background: #343a40 !important;
+    color: #FFFFFF;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default {
+    background: #0D435C;
+}
+
+.button.default:active,
+input[type=submit].default:active,
+.button.default:focus,
+input[type=submit].default:focus,
+.button.default:hover,
+input[type=submit].default:hover {
+    background: #343a40;
+}
+
+.object-tools a:focus, .object-tools a:hover {
+    background-color: #0D435C;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #343a40;
+    color: #FFFFFF;
+}
+.button:active,
+input[type=submit]:active,
+input[type=button]:active,
+.button:focus,
+input[type=submit]:focus,
+input[type=button]:focus,
+.button:hover,
+input[type=submit]:hover,
+input[type=button]:hover {
+    background-color: #0D435C;
+}
+
+#changelist-filter li.selected a {
+    color: #0D435C !important;
+}
+
+#changelist-filter a:focus,
+#changelist-filter a:hover,
+#changelist-filter li.selected a:focus,
+#changelist-filter li.selected a:hover {
+    color: #343a40 !important;
+}
+
+.selector-chosen h2 {
+    background: #0D435C !important;
+    color: #FFFFFF;
+}
+
+a.active.selector-chooseall:focus,
+a.active.selector-clearall:focus,
+a.active.selector-chooseall:hover,
+a.active.selector-clearall:hover {
+    color: #0D435C !important;
+}
+
+
+.module a, #content-main a, .sticky a{
+color:#099dee;}

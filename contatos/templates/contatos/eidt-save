@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{%block titulo%}Editar | {%endblock%}
+
+{% block conteudo %}
+{% load static%}
+    <link rel="stylesheet" href="{% static 'formularios.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+<div class="whole-screen">
+    <form method="POST" action="{% url 'editar' %}">
+        {% csrf_token %} 
+
+        <div class="pad"></div>
+
+        <div class="form-group2">
+            <div class="squared-container">
+
+                <div class="titulo">
+                <h1>Editar contato</h1>
+                </div>
+
+                <table class="table-edit">
+                    <tr>
+                        <th><label for="nome1">Nome:</label></th>
+                        <td>
+                            <!-- request.POST.nome - serve p manter os dados no campo caso vc erre e pagina reload-->
+                           <input id="nome1" name="nome" value="{{ contato.nome }}" class="form-campo" type="text" ></td>
+                    </tr>
+                    <tr>
+                        <th><label for="sobrenome1">Sobrenome:</label></th>
+                        <td><input id="sobrenome1" name="sobrenome" value="{{ contato.sobrenome}}" class="form-campo" type="text" ></td>
+                    </tr>
+                    <tr>
+                        <th><label for="telefone1">Telefone:</label>  </th>
+                        <td><input id="telefone1" name="telefone" value="{{ contato.telefone }}" class="form-campo" type="text" ></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email1">Seu Email:</label></th>
+                        <td><input id="email1" name="email" value="{{ contato.email }}" class="form-campo" type="email"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="descricao1">Descrição:</label></th>
+                        <td><textarea name="descricao" id="descricao1" placeholder="{{contato.descricao}}" cols="30" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <!-- nao conseguir fzr esse ainda
+                        <th><label for="categoria1">Categoria:</label></th>
+                        <td>
+                            <select name="categoria" id="categorai1" style="width: 5rem;">
+                            <option value="Familia"></option>
+                            </select>
+                        </td> -->
+                    </tr>
+                    <tr>
+                        <th><label for="foto1">Foto:</label></th>
+                        <td><input type="file" name="foto" id="foto1" value="{{contato.foto}}"></td>
+                    </tr>
+                </table>
+                
+                <div class="button-container">
+                    <button class="my-button">Salvar</button>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

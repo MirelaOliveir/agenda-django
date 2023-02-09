@@ -1,0 +1,135 @@
+/* -- main-content -- */
+
+
+
+.homepage-content a {
+    color: var(--link-color)
+}
+
+
+/* --head--*/
+
+.homepage-content {
+    min-height: 61.8vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+    
+}
+
+
+.heading {
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 0 11rem;
+    
+
+}
+
+.heading h1 {
+    font-size: 3.8rem ;
+    margin-bottom: 2.9rem;
+    margin-top: 4rem;
+    
+
+}
+
+
+/* -- search --*/
+
+.table-container {
+    overflow-x: scroll;
+    background-color: var(--white-fade);
+    max-width: 86%;
+}
+
+.form-group {
+    margin-bottom: 0.9rem;
+    margin-top: 6rem;
+    
+}
+
+.form-search {
+    height: 2.5rem;
+    width: 40rem;
+    
+}
+
+@media (max-width:700px) {
+    .form-search {
+        width: 30rem;
+    }
+
+    .heading {
+        display: block;
+        padding: 5rem;
+    }
+
+}
+
+
+/* --table -- */
+
+
+
+table {
+    border-spacing: 0px;
+    border-top:0.05rem solid var(--light-grey);
+    
+}
+
+table th {
+    padding: 2rem 6rem;
+    font-size: 1.6rem;
+    font-weight: 900;
+    ;
+}
+table td{
+   
+    border-top: 0.05rem solid var(--light-grey);
+    padding: 1.6rem 6rem;
+    font-weight: 200;
+    font-size: 1.6rem;
+    color: black;
+}
+
+
+/* -- paginação--*/
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+
+.pagination {
+    border: 1px solid var(--light-grey);
+    width: fit-content;
+    border-radius: 3px;
+
+}
+.page-item{
+    list-style-type: none;
+    float: left;
+}
+
+
+.page-link { 
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color:var(--link-color)
+}
+
+.page-item:hover{
+    box-shadow: 0 0 3px 0 black;
+}
+
+.pagina-atual {
+    background-color: var(--light-grey);
+}

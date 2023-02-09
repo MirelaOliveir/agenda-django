@@ -1,0 +1,66 @@
+{% extends 'base.html'%}
+
+{%block 'link'%}
+{% load static%}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+{%endblock%}
+
+{%block conteudo%}
+<div></div>
+    <div class="heading">
+        {% if request.user.is_authenticated %}
+            <h1>Agenda de <span class="nome-pessoal">{{request.user.first_name}}</span></h1>
+        {% else  %}
+            <h1>Minha Agenda</h1>
+        {% endif %}
+        <form method="get" action="{% url 'busca' %}">
+            <div class="form-group">
+                    <input class="form-search" id="search-input" type="search" placeholder="Digite sua busca" name="termo" value="{{ request.GET.termo }}">  <!-- value para manter o termo no campo depois de buscado-->                
+            </div>
+        </form>
+
+    </div>
+
+
+<div class="homepage-content">
+    <div class="table-container">
+        
+        <div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Telefone</th>
+                    <th>Categoria</th>
+                </tr>
+
+                {% for contato in contatos %}
+                    
+                        <tr>
+                            <td>{{contato.id}}</td>
+                            <td><a href="{% url 'ver_contato' contato.id %}">{{contato.nome}}</a></td>
+                            <td>{{contato.sobrenome}}</td>
+                            <td>{{contato.telefone}}</td>
+                            <td>{{contato.categoria}}</td>
+                        </tr>
+                   
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+<nav class="pagination-container">
+    <ul class="pagination">
+        {% for pagina in contatos.paginator.page_range %}
+            
+                <li class="page-item "><a class="page-link" href="?p={{pagina}}&termo={{ request.GET.termo }}">{{pagina}}</a></li>
+    
+        {%endfor%}
+    </ul>
+</nav>
+
+
+  
+ {%endblock%}
+ 

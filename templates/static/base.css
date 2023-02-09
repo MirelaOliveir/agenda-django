@@ -1,0 +1,112 @@
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+:root {
+    --black: black;
+    --white: white;
+    --primary-color: #343a40;
+    --light-grey: #D6D6D6;
+    --link-color: #007bff;
+    --secondary-blue: #0D435C;
+    --red-alert-contain: rgba(233, 94, 115, 0.2);
+    --red-alert-border: #E8556B;
+    --green-alert-contain: rgba(143, 244, 114, 0.2);
+    --green-alert-border: #6FA95E;
+    --white-fade: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.dark-bg{
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.nome-pessoal {
+    color: var(--secondary-blue);
+}
+
+/* -- nav header -- */
+
+
+.header {
+    position: relative;
+}
+
+.container {
+    min-height: 5rem;
+    width: 100%;
+    padding: 0 11rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  
+}
+
+@media (max-width:700px) {
+    .container {
+        padding: 0 5rem;;
+    }
+}
+
+.container a {
+    font-size: 2.4rem;
+}
+
+.container span {
+    font-size: 2.4rem;
+}
+.container span:hover {
+    cursor: pointer;
+}
+
+.content-container {
+    min-height: 87.6vh;
+    background-image: url(p-bulding-tops.jpg) ;
+    background-size:cover;
+    background-position: center center;
+}
+
+.footing {
+    height: 2rem;
+    text-align: center;
+   
+    width: 100%;
+}
+
+.footing span {
+    color: red ;
+}
+
+.submenu-inside {
+    display: flex;
+    justify-content: space-between;
+    width: 18em;
+}
+
+.submenu-inside a {
+    font-size: 2rem;
+    margin-top: 0.2rem;
+}
+
+.submenu-inside span {
+    color: var(--light-grey);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+

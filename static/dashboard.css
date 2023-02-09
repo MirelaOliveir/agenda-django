@@ -1,0 +1,48 @@
+.form-tb-container {
+    display: flex;
+    
+    justify-content: center;
+}
+
+.mytable {
+    text-align: left;
+    border-spacing: 0px;
+
+}
+
+.mytable td {
+    padding: 1rem;
+    border-bottom: 1px solid var( --light-grey);
+    
+}
+
+.mytable th {
+    border-bottom: 1px solid var( --light-grey);
+}
+.mytable th label{
+    font-weight: 800;
+    padding-right: 12rem;
+}
+
+@media (max-width:800px){
+        .squared-container form table tr th {
+    padding: 1.5vw 2vw 1.5vw 2vw;
+}
+
+    .mytable th label{
+        font-weight: 800;
+        padding-right: 3rem;
+    }
+    #id_descricao {
+        width:20rem;
+    }
+}
+
+@media (max-width:550px){
+    .mytable th label{
+        font-weight: 800;
+        padding-right: 0;
+    }
+    .mytable td {
+    padding: 1rem 0;}
+}

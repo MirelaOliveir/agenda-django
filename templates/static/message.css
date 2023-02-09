@@ -1,0 +1,44 @@
+
+
+.alert-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    
+    font-size: 1.4rem;
+    padding: 1rem;
+    width: 120rem;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 7px;
+    
+
+}
+
+.alert-danger {
+    background-color: var(--red-alert-contain);
+    border: 0.1rem solid var(--red-alert-border);
+    color: var(--red-alert-border);
+}
+
+.alert-success {
+    background-color: var(--green-alert-contain);
+    border: 0.1rem solid var(--green-alert-border);
+    color: var(--green-alert-border);
+}
+
+.alert-warning {
+    background-color: rgba(241, 241, 85, 0.4);
+    border: 0.1rem solid #96962A;
+    color: #96962A;
+}
+
+.alert-info {
+    background-color: rgba(173, 217, 203, 0.2);
+    color: #608D7F;
+    border: 0.1rem solid #608D7F;
+}

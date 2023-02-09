@@ -1,0 +1,85 @@
+.nome {
+    font-size: 3.8rem ;
+    /*padding-top: 8rem;
+    margin-left: 14rem;*/
+    margin-bottom: 1.8rem;
+}
+
+dl > * {
+    font-size: 1.6rem;
+    padding: 1.3rem 0 0 0 ;
+}
+
+dt {
+    font-weight: 800;
+}
+
+.info-list {
+    min-height: 59.5vh;
+}
+
+.pad { 
+    bottom: 0;
+    height: 4rem;
+}
+
+/* teste */
+
+.squared-container-cont {
+    background-color: var(--white-fade);
+    width: 80%;
+    padding:  0 10rem 4rem 10rem;
+   
+}
+
+.button-container-cont {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.my-button a {
+    color: inherit;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;  
+}
+
+.grid div:nth-child(1) {
+    grid-column: span 2;
+    
+}
+
+.form-group {
+    box-sizing: border-box;
+    padding-bottom: 2rem;
+    padding-top: 6rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+}
+
+.imagem {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5%;
+    margin: 9vh 0 0 12vw;
+}
+
+@media (max-width: 800px) {
+    .grid {
+       display: block;
+    }
+    .imagem {
+    margin: 9vh 0 0 0vw;
+    }
+    #p-img {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{%block titulo%}Dashboard de {{user.first_name}} | {%endblock%}
+
+{% block conteudo %}
+
+{% load static%}
+    <link rel="stylesheet" href="{% static 'formularios.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+<div class="whole-screen">
+    
+        <div class="form-group">
+                
+                <div class="titulo">
+                <h1> Olá, <span class="nome-pessoal">{{ request.user.first_name}} {{ request.user.last_name}}</span>, seja bem vindo(a)!</h1>
+                </div>
+                <p>Seu nome de usuário é <span class="nome-pessoal">{{user.username}}</span></p>
+                
+        </div>
+        
+</div>
+
+<div class="form-group2">
+        <div class="squared-container">
+                <div class="question-container">
+                        <h2>Gostaria de adicionar um novo contato?</h2>
+                </div>  
+                <div class="form-tb-container">  <!-- enctype multipart - pq vai ter diferentes tipos de arquivo fotos/texto etc -->
+                        
+                        <form action="{% url 'dashboard' %}" method="POST" enctype="multipart/form-data">
+                                {% csrf_token %} 
+                                <table class="mytable">
+                                        {{form}}
+                                        <tr>
+                                                <td colspan="2">
+                                                        <button type="submit" class="my-button">Salvar</button>
+                                                </td>
+                                        </tr>
+                                </table>
+                        </form>
+
+                </div>
+        </div>
+</div>                
+{% endblock %}

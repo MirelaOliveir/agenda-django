@@ -1,0 +1,161 @@
+
+/* -- containers -- */
+
+
+
+.round-container {
+    box-shadow: 0 0 10px 1px var(--light-grey);
+    width: fit-content;
+    padding: 4rem 8rem;
+    border-radius: 18%;
+    background-color: var(--white-fade);
+    
+}
+
+.squared-container {
+    background-color: var(--white-fade);
+    width: 80%;
+    padding: 4rem 10rem;
+}
+
+.question-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 6rem;
+}
+
+.form-group {
+    box-sizing: border-box;
+    padding-bottom: 2rem;
+    padding-top: 6rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+}
+
+.form-group2 {
+    box-sizing: border-box;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+}
+
+
+.label-campo-container {
+    width: fit-content;
+    
+}
+
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+/* -- label -- */
+
+.form-group p {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    
+}
+
+.form-group h2 {
+    padding-top:8rem;
+    padding-bottom: 3rem;
+}
+
+.label {
+    margin-top: 1.6rem;
+    width: 100%;
+    margin-bottom: 0.8rem;
+    
+}
+
+.table-edit {
+    padding-top: 2rem;
+  
+}
+
+@media (max-width:800px) {
+    .table-edit tr{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .table-edit tr td input {
+        width: 100%;
+    }
+    
+
+}
+
+.squared-container table tr th {
+   
+    padding: 1.5vw 8vw 1.5vw 5vw;
+}
+
+label {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* -- campo-area -- */
+
+.form-campo {
+    height: 2.5rem;
+    width: 30rem; 
+    border-radius: 3px; 
+}
+
+.form-campo:hover {
+    box-shadow: 2px 0 3px  var(--primary-color);
+}
+
+/* -- botao -- */
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container-cont button:nth-child(1){
+    margin-right: 1rem;
+    padding-bottom:0.1rem;
+    padding-right:0.1rem;
+}
+
+.my-button {
+    margin-top: 2rem;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    border: 0.2rem solid var(--primary-color);
+    padding: 0.2rem;
+    color: white;
+}
+
+.my-button:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: white;
+}
+
+.logout-a{
+    color: var(--link-color);
+}
+
+.logout-p{
+    font-size: 1.4rem;
+}
+
+.pad {
+    padding: 3rem;
+}

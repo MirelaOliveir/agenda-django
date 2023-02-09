@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+
+{%block titulo%}{{contato.nome}} {{contato.sobrenome}}| {%endblock%}
+
+{%block 'link'%}
+{% load static%}
+<link rel="stylesheet" href="{% static 'ver_contato.css' %}">
+<link rel="stylesheet" href="{% static 'formularios.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{%endblock%}
+
+{%block conteudo%}
+<div class="form-group">
+    <div class="squared-container-cont grid">
+        
+        <div class="button-container-cont">
+            <button class="my-button"><a href="{% url 'editar' contato.id %}"><i class="fa fa-edit" ></i></a></button>
+            <button class="my-button"><a href="{% url 'delete' contato.id %}"><i class="fa fa-trash-o"></i></a></button>
+        </div>
+
+        <div > 
+            <h1 class="nome">{{contato.nome}} {{contato.sobrenome}}</h1>
+            <dl class="info-list">
+                <dt>ID</dt>
+                <dd>{{contato.id}}</dd>
+                
+                <dt>Telefone</dt>
+                <dd>{{contato.telefone}}</dd>
+
+                <dt>E-mail</dt>
+                <dd>{{contato.email}}</dd>
+
+                <dt>Data de criação</dt>
+                <dd>{{contato.data_criacao|date:'d/m/Y ' }}</dd>
+
+                <dt>Categória</dt>
+                <dd>{{contato.categoria}}</dd>
+
+                <dt>Descrição</dt>
+                <dd>{{contato.descricao}}</dd>
+
+            </dl>
+        </div> 
+
+        <div >
+            {% if contato.foto %}
+                <p id="p-img">
+                    <img src="{{ contato.foto.url }}" alt="imagem do contato" class="imagem">
+                </p>
+            {% endif %}
+        </div>
+        
+    </div>
+</div>
+<div class="pad"></div>
+{%endblock%}
