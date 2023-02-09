@@ -1,5 +1,5 @@
 # agenda-django
-<h1>agenda telefônica com sistema de login. Python, Django</h1>
+<span>agenda telefônica com sistema de login. Python, Django</span>
 
 <img src='agenda.png'/>
 
